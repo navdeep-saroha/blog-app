@@ -17,6 +17,10 @@ app.get("/view", (req,res) => {
     res.render("content.ejs");
 })
 
+app.get("/create", (req,res) => {
+    res.render("create.ejs");
+})
+
 app.listen(port, () => {
     console.log(`Listenin on ${port}`);
 });
