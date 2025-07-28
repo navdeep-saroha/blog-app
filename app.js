@@ -6,6 +6,19 @@ const port = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+app.post("/submit", (req,res) => {
+    var title = req.body.title;
+    var story = req.body.story;
+    console.log('Received form data:');
+    console.log('Title', title);
+    console.log('Content', story);
+
+    res.render('content.ejs',{
+        title: title,
+        story: story
+    });
+});
+
 app.get("/", (req,res) => {
     res.render("index.ejs");
 })
@@ -15,7 +28,10 @@ app.get("/home", (req,res) => {
 })
 
 app.get("/view", (req,res) => {
-    res.render("content.ejs");
+    res.render("content.ejs",{
+        title: title,
+        story: story
+    });
 })
 
 app.get("/create", (req,res) => {
@@ -26,12 +42,3 @@ app.listen(port, () => {
     console.log(`Listenin on ${port}`);
 });
 
-app.post("/submit", (req,res) => {
-    var title = req.body.title;
-    var story = req.body.story;
-    console.log('Received form data:');
-    console.log('Title', title);
-    console.log('Content', story);
-
-    res.send('Post submitted successfully!');
-});
