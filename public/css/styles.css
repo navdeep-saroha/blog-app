@@ -22,6 +22,23 @@
     justify-content: flex-start;
 }
 
-.item {
-    align-self: flex-end;
+.form-container {
+    padding-left: 140px;
+    margin-right: 92px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+.form-title {
+    font-size: medium;
+    margin: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 93%;
+    height: 50px;
 }

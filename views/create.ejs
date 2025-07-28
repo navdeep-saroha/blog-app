@@ -10,18 +10,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="flex-wrapper">
-        <div class="mb-3 create">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="title" class="form-control" id="exampleFormControlInput1" placeholder="Title">
+    <form action="/submit" class="form-container" method="post">
+        <div class="form-group">
+            <label for="title" class="fw-bold text-body-emphasis lh-1 form-title" >Title</label>
+            <input type="text" class="form-control" id="title" name="title">
         </div>
-        <div class="mb-3 create">
-            <label for="exampleFormControlTextarea1" class="form-label">Enter Your Story Here</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <div class="form-group">
+            <label for="story" class="fw-bold text-body-emphasis lh-1 form-title">Enter Your Story Here</label>
+            <textarea class="form-control" id="story" rows="3" name="story"></textarea>
         </div>
-        <div class="item">
-        <%- include("partials/footer.ejs") %>
-        </div>
-    </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+    
+    <footer contentEditable><%- include("partials/footer.ejs") %></footer> 
 </body>
 </html>
