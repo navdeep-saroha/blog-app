@@ -1,3 +1,27 @@
 .container {
     color: black;
 }
+
+.main {
+    padding-left: 100px;
+}
+
+.main-1 {
+    padding-left: 150px;
+}
+
+.create {
+    padding-left: 92px;
+    padding-right: 92px;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.item {
+    align-self: flex-end;
+}
