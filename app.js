@@ -28,10 +28,8 @@ app.get("/home", (req,res) => {
 })
 
 app.get("/view", (req,res) => {
-    res.render("content.ejs",{
-        title: title,
-        story: story
-    });
+        res.render("content.ejs");
+   
 })
 
 app.get("/create", (req,res) => {
@@ -41,4 +39,3 @@ app.get("/create", (req,res) => {
 app.listen(port, () => {
     console.log(`Listenin on ${port}`);
 });
-

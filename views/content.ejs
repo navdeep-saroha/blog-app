@@ -12,12 +12,31 @@
 <body>
     <div class="flex-wrapper">
         <div class="content-container">
+            <%if(locals.title && locals.story) { %>
+                <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold main">
+                            <%= title %>
+                        </h1>
+                        <p class="col-md-8 fs-4 main">
+                            <%= story %>
+                        </p>
+                    </div>
+                </div>
+          <%  } else { %>
             <div class="p-5 mb-4 bg-body-tertiary rounded-3">
                 <div class="container-fluid py-5">
-                    <h1 class="display-5 fw-bold main"><%= title %></h1>
-                    <p class="col-md-8 fs-4 main"><%= story %></p>
+                    <h1 class="display-5 fw-bold main">
+                        Pinned Post
+                    </h1>
+                    <p class="col-md-8 fs-4 main">
+                        Content of pinned post.
+                    </p>
                 </div>
             </div>
+         <% } %>
+
+            
             <div class="row align-items-md-stretch main-1">
                 <div class="col-md-4">
                     <div class="h-100 p-5 text-bg-dark rounded-3">
